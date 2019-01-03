@@ -305,7 +305,13 @@ x = if a > 0 then b else c end
 x = unless a <= 0 then b else c end
 ```
 
-![](https://proglib.io/wp-content/uploads/2018/08/Screenshot_1.png)
+if  | unless
+------------- | -------------
+`if x < 5 then statment1 end ` | `unless x >= 5 then statment1 end`
+`if x < 5 then statment1 else statment2 end ` | `unless x >= 5 then statment1 else statment2 end`
+`statment1 if y == 3` | `statment1 unless y != 3`
+`x = if a > 0 then b else c end` | `x = unless a <= 0 then b else c end`
+
 
 #### case
 
@@ -344,7 +350,13 @@ until counter == 5
 end
 ```
 
-![](https://proglib.io/wp-content/uploads/2018/08/Screenshot_2.png)
+First  | Second
+------------- | -------------
+`i = 0 while i < 5 #code... end`  | `i = 0 until i == 5 #code... end`
+`fro x in list do #code... end`  | `list.each do |x| #code... end`
+`loop do #code break if condition end` | `loop do #code break unless antiCondition end`
+`n.times do |i| #code... end` | `0.upto(n) do |i| #code... end`
+`for i in 0..10 do #code... end` | `list.each_index do |i| #code... end`
 
 
 #### for
@@ -508,7 +520,12 @@ class Human
 end
 ```
 
-![](https://proglib.io/wp-content/uploads/2018/08/Screenshot_3.png)
+First  | Second
+------------- | -------------
+`attr_reader :name`  | `def name @name end`
+`attr_writer :name`  | `def name=(val) @name = val; end`
+`attr_accessor :name` | `attr_reader :name; attr_writer :name`
+`attr_accessor :name, :age` | `attr_accessor :name; attr_accessor :age`
 
 ### Методы
 
